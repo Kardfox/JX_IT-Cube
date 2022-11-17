@@ -1,3 +1,76 @@
+/* FONTS */
+@font-face {
+    font-family: "Source";
+    src: url(/storage/fonts/SourceSansPro-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Source-Bold";
+    src: url(/storage/fonts/SourceSansPro-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Source-Italic";
+    src: url(/storage/fonts/SourceSansPro-Italic.ttf);
+}
+
+/* RULES */
 html {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Source";
+}
+
+body {
+    margin: 0%;
+}
+
+main {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+#header {
+    width: 100%;
+    color: #ffffff;
+    padding: 2%;
+    padding-left: 3%;
+    height: fit-content;
+}
+
+#projectName {
+    background-color: #00c2ff;
+    border: 1px solid #00c2ff;
+    border-radius: 10px;
+    display: inline;
+    font-family: "Source-Italic";
+    padding: 5px;
+    vertical-align: middle;
+}
+
+.about {
+    display: inline;
+    font-family: "Source-Bold";
+    vertical-align: middle;
+    color: #808080;
+    text-decoration: none;
+    text-align: right;
+}
+
+#showGraph {
+    min-width: 400px;
+    margin-top: 100px;
+    border: 1px solid #d3d3d3;
+}
+
+#labelYInput {
+    transform: rotate(-90deg);
+}
+
+#graphImg {
+    border: 1px solid #d3d3d3;
+    border-radius: 25px;
+    margin-left: 25%;
+}
+
+#labelXInput {
+    display: block;
 }

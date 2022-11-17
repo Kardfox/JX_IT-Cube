@@ -6,8 +6,17 @@
         <title>MatGraph</title>
     </head>
     <body>
-        <header>Hello!</header>
-        <h1>It's flask!</h1>
+        <div id="header">
+            <h2 id="projectName">MatGraph</h2>   
+            <a class="about" href="{{ url_for('about') }}">Про проект</a>
+        </div>
+        <main>
+            <div id="showGraph">
+                <input id="labelYInput" type="text" placeholder="Пометка по Y">
+                <img id="graphImg" alt="Перенесите вашу таблицу сюда">
+                <input id="labelXInput" type="text" placeholder="Пометка по X">
+            </div>
+        </main>
     </body>
     <script type="module" src="{{ url_for('static', filename='scripts/main.js') }}" async/>
 </html>
