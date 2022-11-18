@@ -7,16 +7,21 @@
     </head>
     <body>
         <div id="header">
-            <h2 id="projectName">MatGraph</h2>   
+            <h2 id="projectName">MatGraph</h2>
             <a class="about" href="{{ url_for('about') }}">Про проект</a>
         </div>
         <main>
             <div id="showGraph">
-                <input id="labelYInput" type="text" placeholder="Пометка по Y">
-                <img id="graphImg" alt="Перенесите вашу таблицу сюда">
-                <input id="labelXInput" type="text" placeholder="Пометка по X">
+                <input id="labelYInput" class="labels" type="text" placeholder="Пометка по Y">
+                <div id="graphContainer">
+                    <img id="graph" alt="Перенесите вашу таблицу в эту зону">
+                    <input id="uploadInput" type="file" accept="application/excel, text/plain" hidden>
+                    <label for="uploadInput">или нажмите <span id="uploadButton">сюда</span></p>
+                </div>
+                <input id="labelXInput" class="labels" type="text" placeholder="Пометка по X">
             </div>
         </main>
     </body>
-    <script type="module" src="{{ url_for('static', filename='scripts/main.js') }}" async/>
+    <script type="module" src="{{ url_for('static', filename='scripts/jquery.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='scripts/main.js') }}"></script>
 </html>

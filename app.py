@@ -1,4 +1,6 @@
 import flask
+import utils
+
 
 app = flask.Flask(
     __name__,
@@ -13,6 +15,12 @@ def main():
 @app.get("/about")
 def about():
     return "It's a coool project"
+
+@app.post("/render")
+def render():
+    file = flask.request.data
+    image = utils.simplest_render(file)
+    return flask.send_file(image, mimetype='image/png')
 
 @app.get("/favicon.ico")
 def return_icon():
